@@ -24,20 +24,20 @@ html {
 }
 
 h1 {
-  @apply text-4xl font-bold mb-6;
+  @apply text-2xl md:text-4xl font-bold mb-6;
   font-family: 'Inter', sans-serif;
 }
 
 h2 {
-  @apply text-2xl font-semibold mb-4;
+  @apply text-lg md:text-2xl font-semibold mb-4;
 }
 
 p {
-  @apply text-base leading-relaxed mb-4;
+  @apply text-sm md:text-base leading-relaxed mb-4;
 }
 
 .logo {
-    @apply w-30 h-auto ml-4;
+    @apply w-30 h-auto;
 }
 
 .navbar {
@@ -131,6 +131,6 @@ p {
 }
 
 .inputform {
-    @apply  rounded-lg bg-[#F5F5F5] placeholder-black m-2 my-4 box-border p-4 h-12;
+    @apply  rounded-lg bg-[#F5F5F5] placeholder-black mx-2 my-4 box-border p-4 h-12;
 }
 
