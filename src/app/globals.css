@@ -131,6 +131,6 @@ p {
 }
 
 .inputform {
-    @apply  rounded-lg bg-[#F5F5F5] placeholder-black mx-2 my-4 box-border p-4 h-12;
+    @apply  rounded-lg bg-[#F5F5F5] placeholder-black mx-2 my-4 p-3 box-border h-10;
 }
 

@@ -56,71 +56,80 @@ export default function Header() {
     }, []);
 
 
-    return (
-        
-        <div className="grid grid-cols-1 md:grid-cols-5 bg-[#F5F5F5]">
-            {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
-            <div className="flex flex-col col-span-1 md:col-span-3 min-h-100 md:min-h-150 container mx-auto px-4 md:px-20">{/*navbar and below*/}
-                    <div className="flex flex-row items-center mt-10"> {/*navbar*/}
-                        <img className="logo" src="/logo.png" alt="job search logo"></img>
-                        <nav className="navbar">
-                            <div>
-                                <div className="hamburger ml-auto">
-                                    <span></span>
-                                    <span className="!w-5"></span>
-                                    <span></span>
+return (
+    <div className="bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(to right, #f5f5f5 0%, #f5f5f5 60%, #00cba3 60%, #00cba3 100%)",}}>
+       {/*for filling the right and left bg with the appropriate colors*/}
+        <header className="container mx-auto px-4 md:px-20 z-10">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-x-20 bg-[#F5F5F5]">
+                {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
+                <div className="flex flex-col col-span-1 md:col-span-3 min-h-100 md:min-h-150">{/*navbar and below*/}
+                        <div className="flex flex-row items-center mt-10"> {/*navbar*/}
+                            <img className="logo" src="/logo.png" alt="job search logo"></img>
+                            <nav className="navbar">
+                                <div>
+                                    <div className="hamburger ml-auto">
+                                        <span></span>
+                                        <span className="!w-5"></span>
+                                        <span></span>
+                                    </div>
+
+                                    <ul>
+                                        <li><Link href="/" className={isActive("/") ? "active-link" : ""}>Home</Link></li>
+                                        <li><Link href="/job" className={isActive("/job") ? "active-link" : ""}>Job</Link></li>
+                                        <li><Link href="/about" className={isActive("/about") ? "active-link" : ""}>About Us</Link></li>
+                                        <li><Link href="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact</Link></li>
+                                    </ul>
                                 </div>
 
-                                <ul>
-                                    <li><Link href="/" className={isActive("/") ? "active-link" : ""}>Home</Link></li>
-                                    <li><Link href="/job" className={isActive("/job") ? "active-link" : ""}>Job</Link></li>
-                                    <li><Link href="/about" className={isActive("/about") ? "active-link" : ""}>About Us</Link></li>
-                                    <li><Link href="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact</Link></li>
-                                </ul>
-                            </div>
-
-                        </nav>
-                    </div>
-                    <div className="flex flex-col my-auto">{/*below navbar*/}
-                        <h1>Search, Find, & Apply</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-                        <div className="mb-10 flex flex-row justify-between bg-white rounded-xl"> {/*search fields*/}
-                            {/*<input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>*/}
-                            <div className="flex items-center flex-grow min-w-34">
-                                <i className="fa-solid fa-magnifying-glass inputform text-black text-xs md:text-base ml-2 !mr-0 !rounded-r-none"></i>
-                                <input type="text" placeholder="Job title or keyword" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
-                            </div>
-                            {/*<input list="options" placeholder="Location" className="inputform flex-grow min-w-0" />*/}
-                            <div className="flex items-center flex-grow min-w-2">
-                                <i className="fa-solid fa-location-dot inputform text-black text-xs md:text-base !mr-0 !rounded-r-none"></i>
-                                <input type="text" placeholder="Location" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
-                            </div>
-                            <datalist id="options" >
-                                <option value="Beirut" />
-                                <option value="Zahle" />
-                                <option value="Koura" />
-                            </datalist>
-                            <div className="flex self-center">
-                                <button className="flex-shrink-0 px-4 mx-2 h-12 bg-[#00CBA3] text-white border-none cursor-pointer rounded">Search</button>
-                            </div>
+                            </nav>
                         </div>
+                        <div className="flex flex-col my-auto">{/*below navbar*/}
+                            <h1>Search, Find, & Apply</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+                            <div className="mb-10 flex flex-col md:flex-row justify-between bg-white rounded-xl">
+                                <div className="flex flex-row justify-between flex-grow"> {/*search fields*/}
+                                    {/*<input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>*/}
+                                    <div className="flex items-center flex-grow-[2]">
+                                        <i className="fa-solid fa-magnifying-glass inputform text-black text-xs md:text-base ml-2 !mr-0 !rounded-r-none"></i>
+                                        <input type="text" placeholder="Job title or keyword" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
+                                    </div>
+                                    {/*<input list="options" placeholder="Location" className="inputform flex-grow min-w-0" />*/}
+                                    <div className="flex items-center flex-grow-[1]">
+                                        <i className="fa-solid fa-location-dot inputform text-black text-xs md:text-base !mr-0 !rounded-r-none"></i>
+                                        <input type="text" placeholder="Location" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
+                                    </div>
+                                    <datalist id="options" >
+                                        <option value="Beirut" />
+                                        <option value="Zahle" />
+                                        <option value="Koura" />
+                                    </datalist>
+                                </div>
+                                <div className="flex self-center mb-2 md:mb-0">
+                                    <button className="flex-shrink-0 px-4 mx-2 h-10 bg-[#00CBA3] text-white border-none cursor-pointer rounded">Search</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                </div>
+                    
+            
+                <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] min-h-150 p-4">
+                    <div className="flex justify-end gap-2 mt-5 mb-4">
+                        <button className="text-white px-3 py-1 text-sm">Sign in</button>
+                        <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                     </div>
-            </div>
-                
-        
-            <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] min-h-150 p-4 ">
-                <div className="flex justify-end gap-2 mt-5 mb-4">
-                    <button className="text-white px-3 py-1 text-sm">Sign in</button>
-                    <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
-                </div>
 
-                <div className="relative text-white w-full min-h-150">
-                    <div className="absolute top-[10%] left-[15%] w-20 h-20 bg-white rounded-md -rotate-12 flex justify-center items-center"><i className="fa-solid fa-handshake-angle text-5xl" style={{color: "#00cba3",}}></i></div>
-                    <div className="absolute top-[30%] right-[15%] w-20 h-20 bg-white rounded-md rotate-18 flex justify-center items-center"><i className="fa-solid fa-square-poll-vertical text-5xl" style={{color: "#00cba3",}}></i></div>
-                    <div className="absolute top-[70%] left-[10%] w-20 h-20 bg-white rounded-md -rotate-15 flex justify-center items-center"><i className="fa-solid fa-shield-halved text-5xl" style={{color: "#00cba3",}}></i></div>
+                    <div className="relative text-white w-full min-h-150">
+                        <div className="absolute top-[10%] left-[15%] w-20 h-20 bg-white rounded-md -rotate-12 flex justify-center items-center"><i className="fa-solid fa-handshake-angle text-5xl" style={{color: "#00cba3",}}></i></div>
+                        <div className="absolute top-[30%] right-[15%] w-20 h-20 bg-white rounded-md rotate-18 flex justify-center items-center"><i className="fa-solid fa-square-poll-vertical text-5xl" style={{color: "#00cba3",}}></i></div>
+                        <div className="absolute top-[70%] left-[10%] w-20 h-20 bg-white rounded-md -rotate-15 flex justify-center items-center"><i className="fa-solid fa-shield-halved text-5xl" style={{color: "#00cba3",}}></i></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
+    </div>
+    
         
-    );
+        
+);
 }
