@@ -9,15 +9,15 @@
   --white: #fff;
   --black: #000;
 
-  --font-poppins-sans: 'Poppins', sans-serif;
-  --font-inter-sans: 'Inter', sans-serif;
+  /*--font-poppins-sans: 'Poppins', sans-serif;
+  --font-inter-sans: 'Inter', sans-serif;*/
 }
 
-body {
+/*body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Poppins', 'Inter', sans-serif;
-}
+}*/
 
 html {
     @apply scroll-smooth;
@@ -25,6 +25,7 @@ html {
 
 h1 {
   @apply text-4xl font-bold mb-6;
+  font-family: 'Inter', sans-serif;
 }
 
 h2 {
@@ -33,6 +34,10 @@ h2 {
 
 p {
   @apply text-base leading-relaxed mb-4;
+}
+
+.logo {
+    @apply w-30 h-auto ml-4;
 }
 
 .navbar {
