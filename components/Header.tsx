@@ -61,7 +61,7 @@ export default function Header() {
         <div className="flex flex-col md:flex-row bg-[#F5F5F5]"> 
             {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
                 <div className="flex flex-col w-full md:w-[60%] min-h-100 md:min-h-150 container mx-auto">{/*navbar and below*/}
-                    <div className="flex flex-row m-10"> {/*navbar*/}
+                    <div className="flex flex-row items-center m-10"> {/*navbar*/}
                         <img className="logo" src="/logo.png" alt="job search logo"></img>
                         <nav className="navbar">
                             <div className="container mx-auto px-20">
@@ -85,9 +85,17 @@ export default function Header() {
                         <h1>Search, Find, & Apply</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
                         <div className="px-4 mt-5 mb-10 flex flex-row justify-between bg-white rounded-xl"> {/*search fields*/}
-                            <input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>
-                            <input list="options" placeholder="Location" className="inputform flex-grow min-w-0" />
-                            <datalist id="options">
+                            {/*<input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>*/}
+                            <div className="flex items-center flex-grow min-w-0">
+                                <i className="fa-solid fa-magnifying-glass inputform text-black !mr-0 !rounded-r-none"></i>
+                                <input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0 !ml-0 !rounded-l-none"/>
+                            </div>
+                            {/*<input list="options" placeholder="Location" className="inputform flex-grow min-w-0" />*/}
+                            <div className="flex items-center flex-grow min-w-0">
+                                <i className="fa-solid fa-location-dot inputform text-black !mr-0 !rounded-r-none"></i>
+                                <input type="text" placeholder="Location" className="inputform flex-grow min-w-0 !ml-0 !rounded-l-none"/>
+                            </div>
+                            <datalist id="options" >
                                 <option value="Beirut" />
                                 <option value="Zahle" />
                                 <option value="Koura" />
@@ -95,18 +103,19 @@ export default function Header() {
                             <button className="flex-shrink-0 p-4 m-2 my-4 h-12 bg-[#00CBA3] text-white border-none cursor-pointer rounded">Search</button>
                         </div>
                     </div>
-                    
                 </div>
                 
         
-            <div className="flex flex-col md:flex-col md:w-[40%] w-full bg-[#00CBA3] md:rounded-bl-[4rem] min-h-[280px] p-4">
+            <div className="flex flex-col md:flex-col md:w-[40%] w-full bg-[#00CBA3] md:rounded-bl-[4rem] min-h-150 p-4">
                 <div className="flex justify-end gap-2 mt-5 mb-4">
                     <button className="text-white px-3 py-1 text-sm">Sign in</button>
                     <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                 </div>
 
-                <div className="text-white">
-                    <p>logos</p>
+                <div className="relative text-white w-full min-h-150">
+                    <div className="absolute top-[10%] left-[15%] w-20 h-20 bg-white rounded-md -rotate-12 flex justify-center items-center"><i className="fa-solid fa-handshake-angle text-5xl" style={{color: "#00cba3",}}></i></div>
+                    <div className="absolute top-[30%] right-[15%] w-20 h-20 bg-white rounded-md rotate-18 flex justify-center items-center"><i className="fa-solid fa-square-poll-vertical text-5xl" style={{color: "#00cba3",}}></i></div>
+                    <div className="absolute top-[70%] left-[10%] w-20 h-20 bg-white rounded-md -rotate-15 flex justify-center items-center"><i className="fa-solid fa-shield-halved text-5xl" style={{color: "#00cba3",}}></i></div>
                 </div>
             </div>
         </div>
