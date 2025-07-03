@@ -57,12 +57,13 @@ export default function Header() {
 
 
 return (
-    <div className="bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(to right, #f5f5f5 0%, #f5f5f5 60%, #00cba3 60%, #00cba3 100%)",}}>
-       {/*for filling the right and left bg with the appropriate colors*/}
-        <header className="container mx-auto px-4 md:px-20 z-10">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-x-20 bg-[#F5F5F5]">
+    <div className="bg-gradient-md">   
+    {/*<div className="bg-gradient-to-r" style={{ backgroundImage: "linear-gradient(to right, #f5f5f5 0%, #f5f5f5 60%, #00cba3 60%, #00cba3 100%)",}}>*/}
+    {/*for filling the right and left bg with the appropriate colors*/}
+        <header className="container mx-auto px-4 md:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-x-20 bg-[#F5F5F5] min-h-150">
                 {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
-                <div className="flex flex-col col-span-1 md:col-span-3 min-h-100 md:min-h-150">{/*navbar and below*/}
+                <div className="flex flex-col col-span-1 md:col-span-3 flex-1 min-h-150 md:h-full">{/*navbar and below*/}
                         <div className="flex flex-row items-center mt-10"> {/*navbar*/}
                             <img className="logo" src="/logo.png" alt="job search logo"></img>
                             <nav className="navbar">
@@ -86,7 +87,7 @@ return (
                         <div className="flex flex-col my-auto">{/*below navbar*/}
                             <h1>Search, Find, & Apply</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-                            <div className="mb-10 flex flex-col md:flex-row justify-between bg-white rounded-xl">
+                            <div className="flex flex-col md:flex-row justify-between bg-white rounded-xl">
                                 <div className="flex flex-row justify-between flex-grow"> {/*search fields*/}
                                     {/*<input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>*/}
                                     <div className="flex items-center flex-grow-[2]">
@@ -113,8 +114,8 @@ return (
                 </div>
                     
             
-                <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] min-h-150 p-4">
-                    <div className="flex justify-end gap-2 mt-5 mb-4">
+                <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] flex-1 min-h-150 md:h-full p-4">
+                    <div className="flex justify-end gap-2 mt-5">
                         <button className="text-white px-3 py-1 text-sm">Sign in</button>
                         <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                     </div>
