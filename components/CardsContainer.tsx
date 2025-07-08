@@ -21,14 +21,14 @@ type CardsContainerProps = {
 export default function CardsContainer ({containerTitle, containerDescription, btnText, btnLink}: CardsContainerProps) {
     let jobsToRender = jobs;
 
-if (containerTitle === "Recently Added Jobs") {
-  jobsToRender = jobs.slice(4);
-} else if (containerTitle === "Popular Job Categories") {
-  jobsToRender = jobs.slice(0, 4);
-}
+    if (containerTitle === "Recently Added Jobs") {
+    jobsToRender = jobs.slice(5);
+    } else if (containerTitle === "Popular Job Categories") {
+    jobsToRender = jobs.slice(0, 5);
+    }
 
     return (
-        <div className="container mx-auto px-4 py-10 md:px-20 text-center">
+        <div className="container mx-auto px-4 py-30 md:px-20 text-center">
             <h1>{containerTitle}</h1>      
             <p className="text-gray-500 max-w-170 mx-auto">{containerDescription}</p>
 
@@ -39,7 +39,7 @@ if (containerTitle === "Recently Added Jobs") {
                 breakpoints={{
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4.3 },
                 }}
                 //navigation
                 pagination={{ clickable: true }}
@@ -48,17 +48,16 @@ if (containerTitle === "Recently Added Jobs") {
 
                 {jobsToRender.map((card, index) => (
                     <SwiperSlide key={index} className="mb-10">
-                        <div className="mx-auto w-[400px]">
-                            <Card
-                                title={card.title}
-                                description={card.description}
-                                iconClass={card.iconClass}
-                                location={card.location}
-                                time={card.time}
-                                applyLink={card.applyLink}
-                                imageSrc={card.imageSrc}
-                            />
-                        </div>
+                        <Card
+                            title={card.title}
+                            description={card.description}
+                            iconClass={card.iconClass}
+                            location={card.location}
+                            time={card.time}
+                            applyLink={card.applyLink}
+                            imageSrc={card.imageSrc}
+                            disableHover={containerTitle === "Recently Added Jobs"}
+                        /> 
                     </SwiperSlide>
                 ))}
             </Swiper>
