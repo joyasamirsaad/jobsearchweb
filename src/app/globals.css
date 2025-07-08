@@ -154,3 +154,13 @@ p {
     );
   }
 }
+
+.swiper-pagination-bullet {
+  background-color: #ccc !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00CBA3 !important;
+  opacity: 1 !important;
+}
