@@ -39,10 +39,16 @@ export default function Card ({title, description, iconClass, location, time, ap
             )}
 
             {applyLink && (
-            <div className="flex flex-row gap-2 items-center">
-                <Link href={applyLink}><button className={`text-sm font-semibold bg-transparent cursor-pointer transition-colors duration-300 ${disableHover ? 'text-[#00CBA3]' : 'text-[#00CBA3] group-hover:text-white'}`}>Apply Now</button></Link>
-                <i className={`fa-solid fa-chevron-right text-sm align-middle transition-colors duration-300 ${disableHover ? 'text-[#00CBA3]' : 'text-[#00CBA3] group-hover:text-white'}`}></i>
-            </div>
+                <div className="flex flex-row gap-2 items-center [&:hover>i]:translate-x-1">
+                    <Link href={applyLink}>
+                    <button className={`text-sm font-semibold bg-transparent cursor-pointer transition-colors duration-300 ${
+                        disableHover ? 'text-[#00CBA3]' : 'text-[#00CBA3] hover:text-white'
+                    }`}>
+                        Apply Now
+                    </button>
+                    </Link>
+                    <i className="fa-solid fa-chevron-right text-sm align-middle transition-transform duration-300 text-[#00CBA3]"></i>
+                </div>
             )}
 
         </div>

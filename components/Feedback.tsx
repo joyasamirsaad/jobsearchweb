@@ -33,7 +33,7 @@ export default function Feedback() {
             </div>
 
             <div className="order-2 md:order-2 flex flex-col items-center md:items-end"> {/*Image*/}
-                <div className="w-[280px] h-[280px] md:w-[360px] md:h-[360px] bg-[#00CBA3] rounded-xl mb-6" />
+                <img src={person.image} alt={person.name} className="w-[360px] h-[360px] md:w-[460px] md:h-[360px] object-cover rounded-xl mb-6"/>
                 <div className="md:hidden flex flex-col items-center"> {/* Name + Job + Arrows on mobile only */}
                     <div className="font-semibold text-black">{person.name}</div>
                     <p className="text-sm text-gray-500">{person.job}</p>

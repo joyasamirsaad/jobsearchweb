@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#00CBA3] flex flex-row justify-center items-center gap-8 flex-wrap pt-70 pb-20">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row md:justify-center items-start gap-12 flex-wrap text-white md:text-base">
+    <footer className="bg-[#00CBA3] flex flex-row flex-wrap pt-70 pb-20">
+      <div className="container mx-auto px-4 md:px-20 flex flex-col md:flex-row gap-12 md:gap-50 flex-wrap text-white md:text-base">
         <div className="flex flex-col items-start max-w-xs">
           <h1 className="text-2xl font-bold"><span className="text-black">Job</span><span className="text-white">Now</span></h1>
           <p className="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat facilisis nibh vel faucibus.</p>
@@ -22,14 +22,27 @@ export default function Footer() {
           
           <div className="flex flex-col items-end md:items-start text-left">
             <h2 className="font-bold text-2xl mb-2">Pages</h2>
-            <ul className="space-y-1">
-              <li><Link href="#">Home</Link></li>
-              <li><Link href="#">Booking</Link></li>
-              <li><Link href="#">Facilities</Link></li>
-              <li><Link href="#">About Us</Link></li>
-              <li><Link href="#">Location</Link></li>
-              <li><Link href="#">Contact</Link></li>
+            <ul className="space-y-1 list-none text-white">
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">Home</Link>
+              </li>
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">Booking</Link>
+              </li>
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">Facilities</Link>
+              </li>
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">About Us</Link>
+              </li>
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">Location</Link>
+              </li>
+              <li className="relative pl-4 before:content-['>'] before:absolute before:left-0 before:text-white before:font-bold">
+                <Link href="#">Contact</Link>
+              </li>
             </ul>
+
           </div>
         </div>
         

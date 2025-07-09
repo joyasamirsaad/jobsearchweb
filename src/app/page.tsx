@@ -22,7 +22,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex items-center justify-center md:justify-end order-3 md:order-2 md:col-start-2 md:row-start-2">
-                        <button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center">Learn More</button>
+                        <button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center hover:text-white hover:bg-[#00CBA3] transition-colors duration-200">Learn More</button>
                     </div>  
                 </div>
 
@@ -55,11 +55,11 @@ export default function Home() {
             <Feedback />
 
             <div className="relative z-10 flex justify-center"> {/*Register CV*/}
-                <div className="bg-[#003a2c] text-white rounded-xl px-10 py-15 text-center w-11/12 md:w-5/6 lg:w-3/4 -mb-50 shadow-lg">
-                    <div className="w-[60%] mx-auto">
+                <div className="bg-[#003a2c] text-white rounded-xl text-center w-11/12 md:w-5/6 lg:w-3/4 -mb-35 shadow-lg">
+                    <div className="w-[60%] mx-auto p-10 md:p-12">
                         <h1 className="text-2xl font-bold mb-2">Register your CV now!</h1>
                         <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-                        <button className="text-white px-6 py-2 text-sm font-semibold bg-transparent border-2 border-white rounded-md cursor-pointer">Register Now</button>
+                        <button className="text-white px-6 py-2 text-sm font-semibold bg-transparent border-2 border-white rounded-md cursor-pointer hover:text-[#003a2c] hover:bg-white transition-colors duration-200">Register Now</button>
                     </div>
                 </div>
             </div>

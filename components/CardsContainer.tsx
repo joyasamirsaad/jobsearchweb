@@ -28,9 +28,9 @@ export default function CardsContainer ({containerTitle, containerDescription, b
     }
 
     const breakpoints = containerTitle === "Recently Added Jobs" ? {
-        640: { slidesPerView: 1.7 },
-        768: { slidesPerView: 2.3 },
-        1024: { slidesPerView: 3.2 },
+        640: { slidesPerView: 2.6 },
+        768: { slidesPerView: 2.6 },
+        1024: { slidesPerView: 2.6 },
     } : {
         640: { slidesPerView: 2.3 },
         768: { slidesPerView: 3.3 },
@@ -42,14 +42,14 @@ export default function CardsContainer ({containerTitle, containerDescription, b
             <h1>{containerTitle}</h1>      
             <p className="text-gray-500 max-w-170 mx-auto">{containerDescription}</p>
 
-            <Swiper
+            <Swiper className="mt-10"
                 key={containerTitle} 
                 modules={[/*Navigation,*/ Pagination]}
                 spaceBetween={20}
                 slidesPerView={1}
                 breakpoints={breakpoints}
                 //navigation
-                pagination={{ clickable: true }}
+                //pagination={{ clickable: true }}
             >
                 
 
@@ -73,7 +73,7 @@ export default function CardsContainer ({containerTitle, containerDescription, b
             </Swiper>
 
             {btnText && btnLink && (
-                <Link href={btnLink}><button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center">{btnText}</button></Link>
+                <Link href={btnLink}><button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center hover:text-white hover:bg-[#00CBA3] transition-colors duration-200">{btnText}</button></Link>
             )}
         </div>
     );
