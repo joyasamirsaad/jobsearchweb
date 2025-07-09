@@ -13,7 +13,7 @@ type CardProps = {
 
 export default function Card ({title, description, iconClass, location, time, applyLink, imageSrc, disableHover = false }: CardProps){
     return (
-        <div className={`group rounded-xl p-6 flex flex-col text-left transition-colors duration-300 gap-6 ${disableHover ? 'bg-white' : 'bg-white hover:bg-[#00CBA3]'}`}>
+        <div className={`group rounded-xl p-6 flex flex-col text-left justify-between h-full min-h-[270px] transition-colors duration-300 gap-6 ${disableHover ? 'bg-white' : 'bg-white hover:bg-[#00CBA3]'}`}>
             {imageSrc ? (<img src={imageSrc} alt="job logo" className="w-25 h-25 my-5 object-cover rounded-full"/>) : 
             (<i className={`${iconClass} text-5xl mb-4 text-[#00CBA3] group-hover:text-white transition-colors duration-300`}></i>)
             }

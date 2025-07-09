@@ -28,9 +28,9 @@ h1 {
   font-family: 'Inter', sans-serif;
 }
 
-h2 {
+/*h2 {
   @apply text-lg md:text-2xl font-semibold mb-4;
-}
+}*/
 
 p {
   @apply text-sm md:text-base leading-relaxed mb-4;
@@ -163,4 +163,8 @@ p {
 .swiper-pagination-bullet-active {
   background-color: #00CBA3 !important;
   opacity: 1 !important;
+}
+
+footer i {
+    @apply mr-1;
 }

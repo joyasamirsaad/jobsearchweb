@@ -27,28 +27,36 @@ export default function CardsContainer ({containerTitle, containerDescription, b
     jobsToRender = jobs.slice(0, 5);
     }
 
+    const breakpoints = containerTitle === "Recently Added Jobs" ? {
+        640: { slidesPerView: 1.7 },
+        768: { slidesPerView: 2.3 },
+        1024: { slidesPerView: 3.2 },
+    } : {
+        640: { slidesPerView: 2.3 },
+        768: { slidesPerView: 3.3 },
+        1024: { slidesPerView: 4.3 },
+    };
+
     return (
         <div className="container mx-auto px-4 py-30 md:px-20 text-center">
             <h1>{containerTitle}</h1>      
             <p className="text-gray-500 max-w-170 mx-auto">{containerDescription}</p>
 
             <Swiper
+                key={containerTitle} 
                 modules={[/*Navigation,*/ Pagination]}
                 spaceBetween={20}
                 slidesPerView={1}
-                breakpoints={{
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 4.3 },
-                }}
+                breakpoints={breakpoints}
                 //navigation
                 pagination={{ clickable: true }}
             >
                 
 
                 {jobsToRender.map((card, index) => (
-                    <SwiperSlide key={index} className="mb-10">
-                        <Card
+                    <SwiperSlide key={index} className="mb-10 h-full">
+                        <div className="h-full">
+                            <Card
                             title={card.title}
                             description={card.description}
                             iconClass={card.iconClass}
@@ -58,6 +66,8 @@ export default function CardsContainer ({containerTitle, containerDescription, b
                             imageSrc={card.imageSrc}
                             disableHover={containerTitle === "Recently Added Jobs"}
                         /> 
+                        </div>
+                        
                     </SwiperSlide>
                 ))}
             </Swiper>

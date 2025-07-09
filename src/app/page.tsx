@@ -2,12 +2,13 @@
 import Card from '../../components/Card';
 import CardsContainer from '../../components/CardsContainer';
 import Container from '../../components/Container';
+import Feedback from '../../components/Feedback';
 
 export default function Home() {
     return (
         <div className="bg-[#FBFBFB]">
             <div className="container mx-auto px-4 md:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> {/*How it works*/}
                     <h1 className="mt-30 col-span-1 md:col-span-2">How it works</h1>
                     <div className="order-1 md:order-1 flex flex-col">
                         <p className="text-[#b6b6b6]">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
@@ -37,7 +38,7 @@ export default function Home() {
                     imagePosition="left"
                 />
             </div>
-            <div className="bg-[#EEF9F6]">
+            <div className="bg-[#EEF9F6]"> {/*Popular jobs*/}
                 <CardsContainer containerTitle="Popular Job Categories" 
                     containerDescription="Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque."
                     btnText="View More"
@@ -45,11 +46,25 @@ export default function Home() {
                 />
             </div>
             
-            <CardsContainer containerTitle="Recently Added Jobs"
+            <CardsContainer containerTitle="Recently Added Jobs" 
                 containerDescription="Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque."
                 btnText="View More"
                 btnLink="#"
-            />
+            /> {/*Recently added jobs*/}
+
+            <Feedback />
+
+            <div className="relative z-10 flex justify-center"> {/*Register CV*/}
+                <div className="bg-[#003a2c] text-white rounded-xl px-10 py-15 text-center w-11/12 md:w-5/6 lg:w-3/4 -mb-50 shadow-lg">
+                    <div className="w-[60%] mx-auto">
+                        <h1 className="text-2xl font-bold mb-2">Register your CV now!</h1>
+                        <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
+                        <button className="text-white px-6 py-2 text-sm font-semibold bg-transparent border-2 border-white rounded-md cursor-pointer">Register Now</button>
+                    </div>
+                </div>
+            </div>
+
+
         </div> 
         
     );
