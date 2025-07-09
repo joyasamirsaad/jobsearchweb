@@ -21,10 +21,11 @@ export default function Feedback() {
                     <div className="font-semibold text-black">{person.name}</div>
                     <p className="text-sm text-gray-500">{person.job}</p>
                     <div className="flex gap-4 mt-4">
-                        <button onClick={prev} className="w-8 h-8 rounded-full bg-[#d3d3d3] flex items-center justify-center"aria-label="Previous testimonial" title="Previous testimonial">
+                        <button onClick={prev} className="w-8 h-8 rounded-full bg-[#d3d3d3] flex items-center justify-center hover:bg-[#00CBA3] transition-colors duration-200" aria-label="Previous testimonial" title="Previous testimonial">
                             <i className="fas fa-arrow-left text-white text-sm"></i>
                         </button>
-                        <button onClick={next} className="w-8 h-8 rounded-full bg-[#00CBA3] flex items-center justify-center" aria-label="Next testimonial" title="Next testimonial">
+
+                        <button onClick={next} className="w-8 h-8 rounded-full bg-[#d3d3d3] flex items-center justify-center hover:bg-[#009e84] transition-colors duration-200" aria-label="Next testimonial" title="Next testimonial">
                             <i className="fas fa-arrow-right text-white text-sm"></i>
                         </button>
                     </div>
