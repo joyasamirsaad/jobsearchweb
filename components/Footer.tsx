@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#00CBA3] flex flex-row flex-wrap pt-70 pb-20">
       <div className="container mx-auto px-4 md:px-20 text-white md:text-base">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-y-8 md:gap-x-50 md:gap-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-y-8 lg:gap-y-12">
           {/* Mobile Layout */}
-          <div className="md:hidden col-span-full">
+          <div className="lg:hidden col-span-full">
             {/* ROW 1: Logo and Description */}
             <div className="grid grid-cols-3 mb-8">
               <div className="col-span-2 flex flex-col items-start">
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Desktop Layout */}
-          <div className="hidden md:contents">
+          <div className="hidden lg:contents">
             {/* Logo and Description */}
             <div className="flex flex-col items-start col-span-2">
               <h1 className="text-2xl font-bold">
@@ -81,7 +81,7 @@ export default function Footer() {
             </div>
 
             {/* Company, Pages, and Contact Us grouped together */}
-            <div className="col-span-4 grid grid-cols-3">
+            <div className="col-span-4 col-start-5 grid grid-cols-3">
               {/* Company */}
               <div className="flex flex-col items-center text-left">
                 <h2 className="font-bold text-2xl mb-2">Company</h2>
