@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-[#00CBA3] flex flex-row flex-wrap pt-55 pb-20">
-      <div className="container mx-auto px-4 md:px-20 grid grid-cols-1 lg:grid-cols-6 gap-y-8 lg:gap-y-12">
+      <div className="container mx-auto px-4 md:px-20 grid grid-cols-1 lg:grid-cols-8 gap-y-8 lg:gap-y-12">
         {/* JobNow Logo + Description */}
         <div className="col-span-1 lg:col-span-2 flex flex-col items-start">
           <h1 className="text-2xl font-bold">
@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         {/* Wrapper for Company + Pages + Contact Us */}
-        <div className="col-span-1 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="col-span-1 lg:col-span-6 lg:col-start-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company */}
           <div className="flex flex-col items-start text-left text-white">
             <h2 className="font-bold text-2xl mb-2">Company</h2>
