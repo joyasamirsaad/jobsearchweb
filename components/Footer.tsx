@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         {/* Wrapper for Company + Pages + Contact Us */}
-        <div className="col-span-1 lg:col-span-6 lg:col-start-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="col-span-1 lg:col-span-6 lg:col-start-5 grid grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company */}
           <div className="flex flex-col items-start text-left text-white">
             <h2 className="font-bold text-2xl mb-2">Company</h2>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           {/* Pages */}
-          <div className="flex flex-col items-center text-left text-white">
+          <div className="flex flex-col items-end md:items-center text-left text-white">
             <h2 className="font-bold text-2xl mb-2">Pages</h2>
             <ul className="space-y-1 list-none text-white">
               {["Home", "Booking", "Facilities", "About Us", "Location", "Contact"].map((item) => (
