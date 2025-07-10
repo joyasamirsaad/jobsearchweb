@@ -26,7 +26,7 @@ export default function Feedback() {
   };
 
   return (
-    <section className="bg-[#FBFBFB] py-20 overflow-hidden">
+    <section className="bg-[#FBFBFB] py-20 mb-30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 items-center text-center md:text-left">
 
         {/* LEFT: TEXT SIDE */}
@@ -42,6 +42,7 @@ export default function Feedback() {
           {/* TEXT SWIPER */}
           <div className="w-full min-w-0 overflow-hidden">
             <Swiper
+              simulateTouch={true}
               onSwiper={setTextSwiper}
               controller={{ control: imageSwiper }}
               slidesPerView={1}
@@ -79,7 +80,7 @@ export default function Feedback() {
                 onClick={slidePrev}
                 aria-label="Previous slide"
                 disabled={atStart}
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ease-in-out
                     ${atStart 
                     ? 'bg-gray-300 opacity-50 pointer-events-none cursor-not-allowed' 
                     : 'bg-[#d3d3d3] hover:bg-[#00CBA3]'
@@ -92,7 +93,7 @@ export default function Feedback() {
                 onClick={slideNext}
                 aria-label="Next slide"
                 disabled={atEnd}
-                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200
+                className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ease-in-out
                     ${atEnd 
                     ? 'bg-gray-300 opacity-50 pointer-events-none cursor-not-allowed' 
                     : 'bg-[#d3d3d3] hover:bg-[#009e84]'
@@ -106,14 +107,19 @@ export default function Feedback() {
         {/* RIGHT: IMAGE SWIPER (visible only on desktop) */}
         <div className="hidden md:flex order-1 md:order-2 justify-center w-full min-w-0 overflow-hidden">
           <Swiper
+            simulateTouch={true}
             onSwiper={setImageSwiper}
             controller={{ control: textSwiper }}
-            allowTouchMove={false}
+            allowTouchMove={true} 
             slidesPerView={1}
             spaceBetween={20}
             modules={[Controller]}
             navigation={false}
             className="w-full"
+            onSlideChange={(swiper) => {
+              setAtStart(swiper.isBeginning);
+              setAtEnd(swiper.isEnd);
+            }}
           >
             {peopleFeedback.map((person, index) => (
               <SwiperSlide key={index}>

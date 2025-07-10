@@ -64,10 +64,10 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-5 gap-x-20 bg-[#F5F5F5] min-h-150">
                 {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
                 <div className="flex flex-col col-span-1 md:col-span-3 flex-1 min-h-150 md:h-full">{/*navbar and below*/}
-                        <div className="flex flex-row items-center mt-10"> {/*navbar*/}
+                        <div className="flex flex-row items-center mt-5"> {/*navbar*/}
                             <img className="logo" src="/logo.png" alt="job search logo"></img>
                             <nav className="navbar">
-                                <div>
+                                <div className="w-fit ml-auto">
                                     <div className="hamburger ml-auto">
                                         <span></span>
                                         <span className="!w-5"></span>
@@ -79,6 +79,10 @@ return (
                                         <li><Link href="/job" className={isActive("/job") ? "active-link" : ""}>Job</Link></li>
                                         <li><Link href="/about" className={isActive("/about") ? "active-link" : ""}>About Us</Link></li>
                                         <li><Link href="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact</Link></li>
+                                        <li className="flex flex-col gap-2 mt-4 md:hidden">
+                                            <button className="text-black px-3 py-1 text-sm text-left cursor-pointer font-semibold hover:text-[#00CBA3] transition-colors duration-300 ease-in-out">Sign in</button>
+                                            <button className="text-black px-3 py-1 text-sm rounded text-left cursor-pointer font-semibold hover:text-[#00CBA3] transition-colors duration-300 ease-in-out"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
+                                        </li>
                                     </ul>
                                 </div>
 
@@ -87,37 +91,34 @@ return (
                         <div className="flex flex-col my-auto">{/*below navbar*/}
                             <h1>Search, Find, & Apply</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.</p>
-                            <div className="flex flex-col md:flex-row justify-between bg-white rounded-xl">
-                                <div className="flex flex-row justify-between flex-grow"> {/*search fields*/}
-                                    {/*<input type="text" placeholder="Job title or keyword" className="inputform flex-grow min-w-0"></input>*/}
-                                    <div className="flex items-center flex-grow-[2]">
+                            <div className="grid md:grid-cols-[1fr_auto] bg-white rounded-xl">
+                                <div className="grid grid-cols-[1fr_1fr] gap-1"> {/*search fields*/}
+                                    <div className="flex items-center w-full">
                                         <i className="fa-solid fa-magnifying-glass inputform text-black text-xs md:text-base ml-2 !mr-0 !rounded-r-none"></i>
-                                        <input type="text" placeholder="Job title or keyword" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
+                                        <input type="text" placeholder="Job title or keyword" className="inputform w-full text-xs md:text-base !ml-0 !rounded-l-none"/>
                                     </div>
-                                    {/*<input list="options" placeholder="Location" className="inputform flex-grow min-w-0" />*/}
-                                    <div className="flex items-center flex-grow-[1]">
+                                    <div className="flex items-center w-full">
                                         <i className="fa-solid fa-location-dot inputform text-black text-xs md:text-base !mr-0 !rounded-r-none"></i>
-                                        <input type="text" placeholder="Location" className="inputform flex-grow text-xs md:text-base !ml-0 !rounded-l-none"/>
+                                        <input type="text" placeholder="Location" className="inputform w-full text-xs md:text-base !ml-0 !rounded-l-none" list="options"/>
                                     </div>
-                                    <datalist id="options" >
+                                    <datalist id="options">
                                         <option value="Beirut" />
                                         <option value="Zahle" />
                                         <option value="Koura" />
                                     </datalist>
                                 </div>
-                                <div className="flex self-center mb-2 md:mb-0">
+                                <div className="flex self-center justify-center md:justify-end mb-2 md:mb-0">
                                     <button className="flex-shrink-0 px-4 mx-2 h-10 bg-[#00CBA3] text-white border-none cursor-pointer rounded">Search</button>
                                 </div>
                             </div>
-                            
                         </div>
                 </div>
                     
             
                 <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] flex-1 min-h-150 md:h-full p-4">
-                    <div className="flex justify-end gap-2 mt-5">
-                        <button className="text-white px-3 py-1 text-sm">Sign in</button>
-                        <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
+                    <div className="invisible md:visible md:flex justify-end gap-2 mt-5">
+                        <button className="text-white px-3 py-1 text-sm cursor-pointer hover:text-black transition-colors duration-300 ease-in-out">Sign in</button>
+                        <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0 cursor-pointer hover:text-[#00CBA3] transition-colors duration-300 ease-in-out"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                     </div>
 
                     <div className="relative text-white w-full min-h-150">

@@ -92,10 +92,10 @@ p {
         @apply flex order-1;
     }
     .navbar {
-        @apply flex-col;
+        @apply flex-col relative w-full;
     }
     .navbar ul {
-        @apply hidden flex-col order-2 absolute top-full left-0 w-full bg-[#F5F5F5] z-40 shadow-md;
+        @apply hidden flex-col order-2 absolute w-full top-full left-0 right-0 bg-[#F5F5F5] z-50 shadow-md px-4 mt-1;
     }
 
     .navbar ul.active {
@@ -103,27 +103,12 @@ p {
     }
 
     .navbar li {
-        @apply my-4;
+        @apply my-4 mx-0;
     }
 
     .navbar a {
-        @apply text-lg block py-2.5;
+        @apply text-lg block py-2.5 px-2;
     }
-}
-@media screen and (max-width: 1080px) {
-  .flex.flex-row.m-10 {
-    @apply flex flex-row justify-between items-center w-full px-4;
-  }
-  .flex.flex-row.m-10 > img.logo {
-    flex-grow: 1;
-    text-align: center;
-  }
-  .navbar {
-    @apply flex items-center;
-  }
-  .hamburger {
-    @apply order-1;
-  }
 }
 
 .active-link {

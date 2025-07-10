@@ -73,7 +73,7 @@ export default function CardsContainer ({containerTitle, containerDescription, b
             </Swiper>
 
             {btnText && btnLink && (
-                <Link href={btnLink}><button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center hover:text-white hover:bg-[#00CBA3] transition-colors duration-200">{btnText}</button></Link>
+                <Link href={btnLink}><button className="text-[#00CBA3] px-6 py-2 text-sm font-semibold bg-transparent border-2 border-[#00CBA3] rounded-md cursor-pointer self-center hover:text-white hover:bg-[#00CBA3] transition-colors duration-300 ease-in-out">{btnText}</button></Link>
             )}
         </div>
     );
