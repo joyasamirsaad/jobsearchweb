@@ -79,7 +79,7 @@ return (
                                         <li><Link href="/job" className={isActive("/job") ? "active-link" : ""}>Job</Link></li>
                                         <li><Link href="/about" className={isActive("/about") ? "active-link" : ""}>About Us</Link></li>
                                         <li><Link href="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact</Link></li>
-                                        <li className="flex flex-col gap-2 mt-4 md:hidden">
+                                        <li className="flex flex-col gap-2 mt-4 lg:hidden">
                                             <button className="text-black px-3 py-1 text-sm text-left cursor-pointer font-semibold hover:text-[#00CBA3] transition-colors duration-300 ease-in-out">Sign in</button>
                                             <button className="text-black px-3 py-1 text-sm rounded text-left cursor-pointer font-semibold hover:text-[#00CBA3] transition-colors duration-300 ease-in-out"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                                         </li>
@@ -116,7 +116,7 @@ return (
                     
             
                 <div className="flex flex-col col-span-1 md:col-span-2 bg-[#00CBA3] md:rounded-bl-[4rem] flex-1 min-h-150 md:h-full p-4">
-                    <div className="invisible md:visible md:flex justify-end gap-2 mt-5">
+                    <div className="invisible lg:visible lg:flex justify-end gap-2 mt-5">
                         <button className="text-white px-3 py-1 text-sm cursor-pointer hover:text-black transition-colors duration-300 ease-in-out">Sign in</button>
                         <button className="bg-white text-black px-3 py-1 text-sm rounded flex-shrink-0 cursor-pointer hover:text-[#00CBA3] transition-colors duration-300 ease-in-out"><i className="fa-solid fa-arrow-right-to-bracket mr-1"></i>Create Account</button>
                     </div>

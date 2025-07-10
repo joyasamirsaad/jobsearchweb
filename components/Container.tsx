@@ -13,11 +13,11 @@ type ContainerProps = {
 
 export default function Container({title, description, btnText, btnLink, imgSrc, imgAlt, imagePosition}: ContainerProps) {
     return (
-        <section className={`flex flex-col md:items-center my-30 gap-4 md:flex-row ${imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-row"}`}>
-            <div className="md:min-w-140 w-full mr-10 flex-[1]">
+        <section className={`flex flex-col lg:items-center my-30 gap-4 lg:flex-row ${imagePosition === "right" ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+            <div className="lg:min-w-140 w-full mr-10 flex-[1]">
                 <Image src={imgSrc} alt={imgAlt} className="min-w-full min-h-full max-h-70 object-cover rounded-lg" width={300} height={400}></Image>
             </div>
-            <div className="flex-[3] text-center md:text-left">
+            <div className="flex-[3] text-center lg:text-left">
                 <h1>{title}</h1>
                 <p className="text-gray-500">{description.join(' ')}</p>
                 {btnText && btnLink && (

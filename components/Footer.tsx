@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#00CBA3] flex flex-row flex-wrap pt-70 pb-20">
       <div className="container mx-auto px-4 md:px-20 text-white md:text-base">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-y-8 md:gap-x-50 md:gap-y-12">
           {/* Mobile Layout */}
           <div className="md:hidden col-span-full">
             {/* ROW 1: Logo and Description */}
@@ -81,11 +81,11 @@ export default function Footer() {
             </div>
 
             {/* Company, Pages, and Contact Us grouped together */}
-            <div className="col-span-4 grid grid-cols-3 gap-8">
+            <div className="col-span-4 grid grid-cols-3">
               {/* Company */}
-              <div className="flex flex-col items-start text-left">
+              <div className="flex flex-col items-center text-left">
                 <h2 className="font-bold text-2xl mb-2">Company</h2>
-                <ul className="space-y-1">
+                <ul className="space-y-1 text-center">
                   <li>Address: 123 Fifth Avenue, New York - 1060, USA.</li>
                   <li>Call Us: + (1600) 456 7890</li>
                   <li>Email: yourid@example.com</li>
@@ -119,7 +119,7 @@ export default function Footer() {
               </div>
 
               {/* Contact Us */}
-              <div className="flex flex-col items-start text-left">
+              <div className="flex flex-col items-center text-left">
                 <h2 className="font-bold text-2xl mb-2">Contact Us</h2>
                 <div className="flex flex-row gap-3 text-xl">
                   <Link href="#" aria-label="Google" target="_blank"><i className="fab fa-google hover:text-[#003a2c] transition-colors duration-300 ease-in-out"></i></Link>

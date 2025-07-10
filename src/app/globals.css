@@ -87,7 +87,7 @@ p {
     @apply block;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
     .hamburger {
         @apply flex order-1;
     }

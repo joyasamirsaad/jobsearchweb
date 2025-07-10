@@ -18,6 +18,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Job Search",
   description: "Job Search app",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 import Header from '../../components/Header';

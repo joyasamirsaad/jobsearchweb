@@ -43,6 +43,7 @@ export default function CardsContainer ({containerTitle, containerDescription, b
             <p className="text-gray-500 max-w-170 mx-auto">{containerDescription}</p>
 
             <Swiper className="mt-10"
+                simulateTouch={true}
                 key={containerTitle} 
                 modules={[/*Navigation,*/ Pagination]}
                 spaceBetween={20}
