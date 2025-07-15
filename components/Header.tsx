@@ -64,7 +64,7 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-5 gap-x-20 bg-[#F5F5F5] min-h-150">
                 {/*<header id="home" className="sticky top-0 z-50 bg-white shadow-md"></header>*/}
                 <div className="flex flex-col col-span-1 md:col-span-3 flex-1 min-h-150 md:h-full">{/*navbar and below*/}
-                    <div className="flex flex-row items-center lg:mt-5 bg-gray-200 p-4 lg:bg-transparent lg:p-0"> {/*navbar*/}
+                    <div className="flex flex-row items-center md:-mx-20 md:px-20 lg:-mx-0 lg:mt-5 bg-gray-200 p-4 lg:bg-transparent lg:p-0"> {/*navbar*/}
                         <div className="absolute inset-x-0 flex justify-center md:static md:justify-center lg:justify-start">
                             <img className="logo" src="/logo1.png" alt="job search logo"></img>
                         </div>
