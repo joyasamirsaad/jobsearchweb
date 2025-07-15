@@ -19,7 +19,7 @@ export default function Card ({title, description, iconClass, location, time, ap
             }
 
             {/*<i className={`${iconClass} text-5xl mb-4 text-[#00CBA3] group-hover:text-white transition-colors duration-300`}></i>*/}
-            <h3 className={`text-lg sm:text-xl font-bold mb-1 ${disableHover ? 'text-black' : 'text-black group-hover:text-white'} transition-colors duration-300 ease-in-out`}>
+            <h3 className={`text-sm md:text-lg font-bold mb-1 ${disableHover ? 'text-black' : 'text-black group-hover:text-white'} transition-colors duration-300 ease-in-out`}>
                 {title}
             </h3>
             <p className={`text-sm mb-3 ${disableHover ? 'text-gray-500' : 'text-gray-500 group-hover:text-white'} transition-colors duration-300 ease-in-out`}>

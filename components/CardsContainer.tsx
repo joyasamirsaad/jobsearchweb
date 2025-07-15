@@ -32,12 +32,12 @@ export default function CardsContainer ({containerTitle, containerDescription, b
         768: { slidesPerView: 1.6 },
         1024: { slidesPerView: 2.6 },
     } : {
-        640: {slidesPerView: 2.9},
-        768: { slidesPerView: 2.9 },
+        640: {slidesPerView: 2.7},
+        768: { slidesPerView: 2.7 },
         1024: { slidesPerView: 4.3 },
     };
 
-    const defaultSlidesPerView = containerTitle === "Recently Added Jobs" ? 1.6 : 2.9;
+    const defaultSlidesPerView = containerTitle === "Recently Added Jobs" ? 1.6 : 2.7;
 
     return (
         <div className="container mx-auto px-4 py-30 lg:px-20 text-center">
