@@ -26,7 +26,7 @@ export default function Feedback() {
   };
 
   return (
-    <section className="bg-[#FBFBFB] py-20 mb-30 overflow-hidden">
+    <section className="bg-[#FBFBFB] mb-30 overflow-hidden">
       <div className="container mx-auto px-4 md:px-20 grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 items-center text-center md:text-left">
 
         {/* LEFT: TEXT SIDE */}

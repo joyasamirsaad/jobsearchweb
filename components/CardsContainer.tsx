@@ -28,17 +28,19 @@ export default function CardsContainer ({containerTitle, containerDescription, b
     }
 
     const breakpoints = containerTitle === "Recently Added Jobs" ? {
-        640: { slidesPerView: 2.6 },
-        768: { slidesPerView: 2.6 },
+        640: {slidesPerView: 1.6},
+        768: { slidesPerView: 1.6 },
         1024: { slidesPerView: 2.6 },
     } : {
-        640: { slidesPerView: 2.3 },
-        768: { slidesPerView: 3.3 },
+        640: {slidesPerView: 2.9},
+        768: { slidesPerView: 2.9 },
         1024: { slidesPerView: 4.3 },
     };
 
+    const defaultSlidesPerView = containerTitle === "Recently Added Jobs" ? 1.6 : 2.9;
+
     return (
-        <div className="container mx-auto px-4 py-30 md:px-20 text-center">
+        <div className="container mx-auto px-4 py-30 lg:px-20 text-center">
             <h1>{containerTitle}</h1>      
             <p className="text-gray-500 max-w-170 mx-auto">{containerDescription}</p>
 
@@ -47,7 +49,7 @@ export default function CardsContainer ({containerTitle, containerDescription, b
                 key={containerTitle} 
                 modules={[/*Navigation,*/ Pagination]}
                 spaceBetween={20}
-                slidesPerView={1}
+                slidesPerView={defaultSlidesPerView}
                 breakpoints={breakpoints}
                 //navigation
                 //pagination={{ clickable: true }}

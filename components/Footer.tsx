@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#00CBA3] flex flex-row flex-wrap pt-55 pb-20">
       <div className="container mx-auto px-4 md:px-20 grid grid-cols-1 lg:grid-cols-8 gap-y-8 lg:gap-y-12">
         {/* JobNow Logo + Description */}
-        <div className="col-span-1 lg:col-span-2 flex flex-col items-start">
+        <div className="col-span-1 w-[60%] lg:col-span-2 lg:w-auto flex flex-col items-start">
           <h1 className="text-2xl font-bold">
             <span className="text-black">Job</span>
             <span className="text-white">Now</span>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           {/* Pages */}
-          <div className="flex flex-col items-end md:items-center text-left text-white">
+          <div className="flex flex-col items-center text-left text-white">
             <h2 className="font-bold text-2xl mb-2">Pages</h2>
             <ul className="space-y-1 list-none text-white">
               {["Home", "Booking", "Facilities", "About Us", "Location", "Contact"].map((item) => (

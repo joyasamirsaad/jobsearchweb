@@ -120,12 +120,14 @@ p {
 }
 .bg-gradient-md {
   background-image: linear-gradient(
-      to bottom,
-      #f5f5f5 0%,     
-      #f5f5f5 46.875%,    
-      #00cba3 46.875%,   
-      #00cba3 100%    
-    );
+    to bottom,
+    #e5e7eb 0%,        
+    #e5e7eb 5rem,      
+    #f5f5f5 5rem,      
+    #f5f5f5 46.875%,   
+    #00cba3 46.875%,   
+    #00cba3 100%
+  );
 }
 
 @media (min-width: 768px) {  
@@ -137,6 +139,26 @@ p {
       #00cba3 60%,
       #00cba3 100%
     );
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {  
+  .bg-gradient-md {
+    background-image: 
+      linear-gradient(
+        to bottom,
+        #e5e7eb 0%,       
+        #e5e7eb 5rem,      
+        #f5f5f5 5rem,      
+        #f5f5f5 100%       
+      ),
+      linear-gradient(
+        to bottom,
+        #00cba3 0%,        
+        #00cba3 100%
+      );
+    background-size: 60% 100%, 40% 100%;
+    background-position: left, right;
+    background-repeat: no-repeat;
   }
 }
 
